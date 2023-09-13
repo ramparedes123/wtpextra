@@ -1,4 +1,5 @@
 import React from "react";
+import "./Widget";
 
 function Widgett({ title, count, link, percentage, icon, see }) {
   return (

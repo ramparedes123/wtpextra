@@ -10,54 +10,54 @@ import Paper from "@mui/material/Paper";
 const List = () => {
   const rows = [
     {
-      id: 1143155,
-      product: "Acer Nitro 5",
-      img: "https://m.media-amazon.com/images/I/81bc8mA3nKL._AC_UY327_FMwebp_QL65_.jpg",
-      customer: "John Smith",
-      date: "1 March",
-      amount: 785,
-      method: "Cash on Delivery",
-      status: "Approved",
+      id: 14573434,
+      category: "Partners",
+      activitytype: "Reset Password",
+      user: "Gum Bolaya",
+      date: "2023-09-21 10:15:00",
+      description: "Password Reset and Recovery",
+      actions: "Reset Password",
+      notes: "Password Reset using Email Auth",
     },
     {
-      id: 2235235,
-      product: "Playstation 5",
-      img: "https://m.media-amazon.com/images/I/31JaiPXYI8L._AC_UY327_FMwebp_QL65_.jpg",
-      customer: "Michael Doe",
-      date: "1 March",
-      amount: 900,
-      method: "Online Payment",
-      status: "Pending",
+      id: 13461213,
+      category: "Transportation",
+      activitytype: "Login",
+      user: "John Smith",
+      date: "2023-09-12 08:30:00",
+      description: "User logged in",
+      actions: "View Details",
+      notes: "Successful login from IP: 192.168.1.1",
     },
     {
-      id: 2342353,
-      product: "Redragon S101",
-      img: "https://m.media-amazon.com/images/I/71kr3WAj1FL._AC_UY327_FMwebp_QL65_.jpg",
-      customer: "John Smith",
-      date: "1 March",
-      amount: 35,
-      method: "Cash on Delivery",
-      status: "Pending",
+      id: 8074534,
+      category: "Voucher",
+      activitytype: "Adding New Voucher",
+      user: "Joanna DC",
+      date: "2023-09-12 11:45:00",
+      description: "New voucher created",
+      actions: "Add Voucher",
+      notes: "Voucher created with name: SPT25%",
     },
     {
-      id: 2357741,
-      product: "Razer Blade 15",
-      img: "https://m.media-amazon.com/images/I/71wF7YDIQkL._AC_UY327_FMwebp_QL65_.jpg",
-      customer: "Jane Smith",
-      date: "1 March",
-      amount: 920,
-      method: "Online",
-      status: "Approved",
+      id: 34512672,
+      category: "Activities",
+      activitytype: "Booking",
+      user: "Christian Mae",
+      date: "2023-09-12 13:20:00",
+      description: "Taal Volcano Scuba Diving",
+      actions: "Payment processed",
+      notes: "Paid amount: $250",
     },
     {
-      id: 2342355,
-      product: "ASUS ROG Strix",
-      img: "https://m.media-amazon.com/images/I/81hH5vK-MCL._AC_UY327_FMwebp_QL65_.jpg",
-      customer: "Harold Carol",
-      date: "1 March",
-      amount: 2000,
-      method: "Online",
-      status: "Pending",
+      id: 1789562,
+      category: "Security",
+      activitytype: "Login",
+      user: "Unknown",
+      date: "	2023-09-12 14:55:00",
+      description: "Failed login attempt",
+      actions: "Block User",
+      notes: "Multiple failed attempts",
     },
   ];
   return (
@@ -66,30 +66,29 @@ const List = () => {
         <TableHead>
           <TableRow>
             <TableCell className="tableCell">Tracking ID</TableCell>
-            <TableCell className="tableCell">Product</TableCell>
-            <TableCell className="tableCell">Customer</TableCell>
+            <TableCell className="tableCell">Category</TableCell>
+            <TableCell className="tableCell">Activity Type</TableCell>
+            <TableCell className="tableCell">User</TableCell>
             <TableCell className="tableCell">Date</TableCell>
-            <TableCell className="tableCell">Amount</TableCell>
-            <TableCell className="tableCell">Payment Method</TableCell>
-            <TableCell className="tableCell">Status</TableCell>
+            <TableCell className="tableCell">Description</TableCell>
+            <TableCell className="tableCell">Actions</TableCell>
+            <TableCell className="tableCell">Notes</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
             <TableRow key={row.id}>
               <TableCell className="tableCell">{row.id}</TableCell>
+              <TableCell className="tableCell">{row.category}</TableCell>
               <TableCell className="tableCell">
-                <div className="cellWrapper">
-                  <img src={row.img} alt="" className="image" />
-                  {row.product}
-                </div>
+                <div className="cellWrapper">{row.activitytype}</div>
               </TableCell>
-              <TableCell className="tableCell">{row.customer}</TableCell>
+              <TableCell className="tableCell">{row.user}</TableCell>
               <TableCell className="tableCell">{row.date}</TableCell>
-              <TableCell className="tableCell">{row.amount}</TableCell>
-              <TableCell className="tableCell">{row.method}</TableCell>
+              <TableCell className="tableCell">{row.description}</TableCell>
+              <TableCell className="tableCell">{row.actions}</TableCell>
               <TableCell className="tableCell">
-                <span className={`status ${row.status}`}>{row.status}</span>
+                <span className={`status ${row.notes}`}>{row.notes}</span>
               </TableCell>
             </TableRow>
           ))}

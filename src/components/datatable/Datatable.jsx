@@ -65,7 +65,7 @@ const Datatable = () => {
     },
   ];
   return (
-    <div className="datatable">
+    <div className="datatable py-5">
       <div className="datatableTitle">
         <h3 className="fw-bold text-black">Property List</h3>
 

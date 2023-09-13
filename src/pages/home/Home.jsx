@@ -1,7 +1,7 @@
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import "./home.scss";
-import Widget from "../../components/widget/Widget";
+
 import Featured from "../../components/featured/Featured";
 import Chart from "../../components/chart/Chart";
 import Table from "../../components/table/Table";
@@ -16,21 +16,21 @@ const Home = () => {
         <div className="widgets">
           <Widgett
             title="PROPERTY"
-            count="1674"
+            count="10,674"
             link="/inventory"
             see="see all properties"
             percentage="34"
           />
           <Widgett
             title="TRANSPORTATION"
-            count="252"
+            count="6,652"
             link="/inventory"
             see="see all transportation"
             percentage="12"
           />
           <Widgett
             title="ACTIVITIES"
-            count="67"
+            count="1,934"
             link="/inventory"
             see="see all activities"
             percentage="65"
@@ -47,10 +47,10 @@ const Home = () => {
           <Chart title="Last 6 Months (Revenue)" aspect={2 / 1} />
           <Featured />
         </div>
-        {/* <div className="listContainer">
-          <div className="listTitle">Latest Transactions</div>
+        <h2 className="p-3">Recent Activity</h2>
+        <div className="charts">
           <Table />
-        </div> */}
+        </div>
       </div>
     </div>
   );

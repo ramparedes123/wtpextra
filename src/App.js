@@ -13,6 +13,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Blog from "./pages/list/Blog";
 import Booking from "./pages/list/Booking";
 
+import Customers from "./pages/customers/Customers";
+import Logs from "./pages/Logs/Logs";
+
 function App() {
   const { darkMode } = useContext(DarkModeContext);
 
@@ -41,6 +44,9 @@ function App() {
             </Route>
             <Route path="blog" element={<Blog />} />
             <Route path="booking" element={<Booking />} />
+
+            <Route path="customers" element={<Customers />} />
+            <Route path="logs" element={<Logs />} />
           </Route>
         </Routes>
       </BrowserRouter>

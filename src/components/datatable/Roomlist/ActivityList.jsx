@@ -8,6 +8,11 @@ import EditProperty from "../../../pages/new/NewProperty/EditProperty";
 import AddActivity from "../../../pages/new/NewActivity/AddActivity";
 import EditActivity from "../../../pages/new/NewActivity/EditActivity";
 
+import { MdOutlineDeleteOutline } from "react-icons/md";
+import { AiOutlineEye } from "react-icons/ai";
+import { Switch } from "@mui/material";
+import Swal from "sweetalert2";
+
 const ActivityList = () => {
   const [data, setData] = useState(userRows);
 
@@ -24,16 +29,38 @@ const ActivityList = () => {
         return (
           <div className="cellAction">
             <Link to="/users/test" style={{ textDecoration: "none" }}>
-              <div className="viewButton">View</div>
+              <div className="viewButton">
+                <AiOutlineEye />
+              </div>
             </Link>
             <div
               className="deleteButton"
-              onClick={() => handleDelete(params.row.id)}
+              onClick={() => {
+                Swal.fire({
+                  title: "Are you sure?",
+                  text: "You won't be able to revert this!",
+                  icon: "warning",
+                  showCancelButton: true,
+                  confirmButtonColor: "#3085d6",
+                  cancelButtonColor: "#d33",
+                  confirmButtonText: "Yes, Delete Property",
+                }).then((result) => {
+                  if (result.isConfirmed) {
+                    handleDelete(params.row.id);
+                    Swal.fire(
+                      "Deleted!",
+                      "Property has been deleted.",
+                      "success"
+                    );
+                  }
+                });
+              }}
             >
-              Delete
+              <MdOutlineDeleteOutline />
             </div>
 
-            <EditActivity className="editButton" />
+            <EditProperty className="editButton" />
+            <Switch />
           </div>
         );
       },

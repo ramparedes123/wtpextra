@@ -1,42 +1,47 @@
 export const userColumns = [
-  // { field: "id", headerName: "ID", width: 50 },
+  { field: "id", headerName: "ID", width: 50 },
+
   {
-    field: "supplierid",
-    headerName: "Supplier ID",
-    width: 100,
+    field: "Customer",
+    headerName: "Name",
+    width: 250,
     renderCell: (params) => {
-      return <div>{params.row.supplierid}</div>;
+      return <div>{params.row.name}</div>;
     },
   },
   {
-    field: "propertytype",
-    headerName: "Type",
-    width: 140,
-    renderCell: (params) => {
-      return <div>{params.row.propertytype}</div>;
-    },
-  },
-  {
-    field: "propertyowner",
-    headerName: "Owner",
+    field: "Origin",
+    headerName: "Login Origin",
     width: 160,
     renderCell: (params) => {
-      return <div>{params.row.owner}</div>;
+      return (
+        <div className={`cellWithOrigin ${params.row.origin}`}>
+          {params.row.origin}
+        </div>
+      );
     },
   },
   {
-    field: "address",
-    headerName: "Address",
-    width: 350,
+    field: "type",
+    headerName: "User type",
+    width: 100,
     renderCell: (params) => {
-      return <div>{params.row.address}</div>;
+      return <div>{params.row.type}</div>;
+    },
+  },
+  {
+    field: "email",
+    headerName: "Email",
+    width: 200,
+    renderCell: (params) => {
+      return <div>{params.row.email}</div>;
     },
   },
 
   {
     field: "contact",
     headerName: "Contact Number",
-    width: 150,
+    width: 180,
     renderCell: (params) => {
       return <div>{params.row.contact}</div>;
     },
@@ -59,112 +64,102 @@ export const userColumns = [
 export const userRows = [
   {
     id: 1,
-    supplierid: "FD342K",
-    propertytype: "Condominium",
-    owner: "Peakview Properties Ltd.",
+    name: "Maria Santos",
+    origin: "GalaGO",
     address: "123 Ocean Drive, Manila, Philippines",
     contact: " 09447828123",
-    review: "In-progress",
+    type: "User",
     status: "active",
     email: "1snow@gmail.com",
   },
   {
     id: 2,
-    supplierid: "JF231K",
-    propertytype: "Condominium",
-    owner: "Horizon Estates",
+    name: "Juan Dela Cruz",
+    origin: "Extranet",
     email: "2snow@gmail.com",
     address: "Station 1, Boracay Island, Philippines",
     contact: " 09447828123",
-    review: "Declined",
+    type: "Partner",
     status: "active",
   },
   {
     id: 3,
-    supplierid: "LK3452",
-    propertytype: "Condominium",
-    owner: "Coastal Realty",
+    name: "Lorna Magbanua",
+    origin: "WalkThePlanet",
     email: "3snow@gmail.com",
     address: "456 Mango Street, Cebu City, Philippines",
     contact: " 09447828123",
-    review: "In-progress",
+    type: "User",
     status: "active",
   },
   {
     id: 4,
-    supplierid: "AD1234",
-    propertytype: "Hotel",
-    owner: "Golden Gate Properties",
+    name: "Andres Reyes",
+    origin: "GalaGO",
     email: "4snow@gmail.com",
     address: "El Nido, Palawan, Philippines",
     contact: " 09447828123",
-    review: "pending",
+    type: "User",
     status: "active",
   },
   {
     id: 5,
-    supplierid: "LI4563",
-    propertytype: "Trench House",
-    owner: "Vista Homes",
+    name: "Carmela Garcia",
+    origin: "GalaGO",
     email: "5snow@gmail.com",
     address: "789 Pine Tree Road, Baguio City, Philippines",
     contact: " 09447828123",
-    review: "In-progress",
+    type: "User",
     status: "passive",
   },
   {
     id: 6,
-    supplierid: "VB4523",
-    propertytype: "Duplex House",
-    owner: "Vista Homes",
+    name: "Ricardo Cruz",
+    origin: "WalkThePlanet",
     email: "6snow@gmail.com",
     address: "Alona Beach, Panglao, Bohol, Philippines",
     contact: " 09447828123",
-    review: "Declined",
+    type: "User",
     status: "active",
   },
   {
     id: 7,
-    supplierid: "NE2343",
-    propertytype: "Town House",
-    owner: "Palm Grove Estates",
+    name: "Emily Fernandez",
+    origin: "Extranet",
     email: "7snow@gmail.com",
     address: "101 Orchid Street, Davao City, Philippines",
     contact: " 09447828123",
-    review: "In-progress",
+    type: "Partner",
     status: "passive",
   },
   {
     id: 8,
-    supplierid: "FG4473",
-    propertytype: "Apartment",
-    owner: "Riverfront Realty",
+    name: "Gabriel Lim",
+    origin: "Extranet",
     email: "8snow@gmail.com",
     address: "Tagaytay City, Cavite, Philippines",
     contact: " 09447828123",
-    review: "Declined",
+    type: "Partner",
     status: "active",
   },
   {
     id: 9,
-    supplierid: "QJ4343",
-    propertytype: "Villa",
-    owner: "Emerald Heights",
+    name: "Teresa Lopez",
+    origin: "GalaGO",
     email: "snow@gmail.com",
     address: "Waterfront Road, Subic Bay Freeport Zone, Philippines",
     contact: " 09447828123",
-    review: "In-progress",
+    type: "User",
     status: "pending",
   },
   {
     id: 10,
-    supplierid: "HG6343",
-    propertytype: "Commercial Property",
-    owner: "Summit Properties",
+    name: "Manuel Tan",
+    origin: "GalaGO",
     email: "snow@gmail.com",
     address: "Coron, Palawan, Philippines",
     contact: " 09447828123",
-    review: "Passed",
+    type: "User",
     status: "active",
   },
 ];

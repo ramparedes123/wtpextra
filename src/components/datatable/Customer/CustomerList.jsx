@@ -1,6 +1,6 @@
-import "./BookingList.scss";
+import "./CustomerList.scss";
 import { DataGrid } from "@mui/x-data-grid";
-import { userColumns, userRows } from "../../../bookingtablesource";
+import { userColumns, userRows } from "../../../usertablesource";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import AddProperty from "../../../pages/new/NewProperty/AddProperty";
@@ -47,7 +47,7 @@ const BookingList = () => {
   return (
     <div className="datatable py-5">
       <div className="datatableTitle">
-        <h3 className="fw-bold text-black">Booking List</h3>
+        <h3 className="fw-bold text-black">Customers List</h3>
 
         <AddProperty />
       </div>

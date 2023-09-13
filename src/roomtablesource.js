@@ -9,7 +9,7 @@ export const userColumns = [
     },
   },
   {
-    field: "blogtitle",
+    field: "roomname",
     headerName: "Room Name",
     width: 300,
     renderCell: (params) => {
@@ -32,7 +32,7 @@ export const userColumns = [
   {
     field: "type",
     headerName: "Type",
-    width: 150,
+    width: 100,
     renderCell: (params) => {
       return <div>{params.row.type}</div>;
     },
@@ -41,7 +41,7 @@ export const userColumns = [
   {
     field: "review",
     headerName: "Review",
-    width: 100,
+    width: 140,
     renderCell: (params) => {
       return <div>{params.row.review}</div>;
     },
@@ -67,11 +67,11 @@ export const userRows = [
     supplierid: "H001",
     roomname: "Cozy Retreat Suite",
     owner: "Serenity Hotels & Resorts",
+    email: "2snow@gmail.com",
     contact: "+1 (555) 123-4567",
     review: "In-progress",
     status: "active",
     type: "Deluxe",
-    email: "1snow@gmail.com",
   },
   {
     id: 2,
@@ -116,5 +116,38 @@ export const userRows = [
     review: "In-progress",
     type: "Premium",
     status: "passive",
+  },
+  {
+    id: 6,
+    supplierid: " H006",
+    roomname: "Cozy Cottage Retreat",
+    email: "cottageowner@email.com",
+    owner: "Peakview Properties Ltd.",
+    contact: "+1 (555) 123-4567",
+    review: "In-progress",
+    type: "Cabin",
+    status: "No-Booking",
+  },
+  {
+    id: 7,
+    supplierid: " H007",
+    roomname: "Urban Chic Apartment",
+    email: "apartmentowner@email.com",
+    owner: "Peakview Properties Ltd.",
+    contact: "+1 (555) 987-6543",
+    review: "In-progress",
+    type: "Apartment",
+    status: "No-Booking",
+  },
+  {
+    id: 8,
+    supplierid: " H008",
+    roomname: "Beachfront Villa Paradise",
+    email: "villaparadise@email.com",
+    owner: "Peakview Properties Ltd.",
+    contact: "+1 (555) 789-1234",
+    review: "In-progress",
+    type: "Villa",
+    status: "No-Booking",
   },
 ];

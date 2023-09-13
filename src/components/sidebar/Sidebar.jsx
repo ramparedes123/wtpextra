@@ -62,24 +62,28 @@ const Sidebar = () => {
             <BsCardChecklist className="icon" />
             <span>Reports</span>
           </li>
-          <li>
-            <BsPersonGear className="icon" />
-            <span>Customers</span>
-          </li>
+          <Link to="/customers" style={{ textDecoration: "none" }}>
+            <li>
+              <BsPersonGear className="icon" />
+              <span>Customers</span>
+            </li>
+          </Link>
           <p className="title">Partners</p>
           <hr />
 
-          <li>
-            <BiStats className="icon" />
-            <span>Partner Stats</span>
-          </li>
+          <Link to="/partners" style={{ textDecoration: "none" }}>
+            <li>
+              <BiStats className="icon" />
+              <span>Partner Stats</span>
+            </li>
+          </Link>
           <p className="title">Pricing Manager</p>
-
-          <li>
-            <AiOutlineGitlab className="icon" />
-            <span>Logs</span>
-          </li>
-
+          <Link to="/logs" style={{ textDecoration: "none" }}>
+            <li>
+              <AiOutlineGitlab className="icon" />
+              <span>Logs</span>
+            </li>
+          </Link>
           <p className="title">Websites</p>
           <hr />
           <a href="https://galago.com.ph" style={{ textDecoration: "none" }}>
